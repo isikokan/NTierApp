@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ImViSHddyr9ASUbbzgjTzMVbXg/rigzd+56QgetORPRjtu6qMoOE+d6xg1wOHjpMfbNTSrmVCG8Nax/72trkmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\okan\\Desktop\\C#\\NTierApp\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\okan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\okan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
