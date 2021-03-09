@@ -22,8 +22,7 @@ namespace ConsoleUI
         {
             IProductService productService = new ProductManager(new EfProductDal());
 
-            List<Product> productList = productService.GetAll();
-            foreach (Product product in productList)
+            foreach (var product in productService.GetAll().Data)
             {
                 Console.WriteLine(product.ProductName);
             }
@@ -33,8 +32,7 @@ namespace ConsoleUI
         {
             IProductService productService = new ProductManager(new EfProductDal());
 
-            List<ProductDetailDto> productDetailList = productService.GetProductDetails();
-            foreach (ProductDetailDto productDetail in productDetailList)
+            foreach (var productDetail in productService.GetProductDetails().Data)
             {
                 Console.WriteLine(productDetail.CategoryName);
             }
