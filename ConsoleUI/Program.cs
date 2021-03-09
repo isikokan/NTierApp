@@ -2,6 +2,7 @@
 using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 
@@ -11,6 +12,14 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            ProductTest();
+            ProductDetailTest();
+
+            Console.ReadLine();
+        }
+
+        static void ProductTest()
+        {
             IProductService productService = new ProductManager(new EfProductDal());
 
             List<Product> productList = productService.GetAll();
@@ -18,7 +27,17 @@ namespace ConsoleUI
             {
                 Console.WriteLine(product.ProductName);
             }
-            Console.ReadLine();
+        }
+
+        static void ProductDetailTest()
+        {
+            IProductService productService = new ProductManager(new EfProductDal());
+
+            List<ProductDetailDto> productDetailList = productService.GetProductDetails();
+            foreach (ProductDetailDto productDetail in productDetailList)
+            {
+                Console.WriteLine(productDetail.CategoryName);
+            }
         }
     }
 }
