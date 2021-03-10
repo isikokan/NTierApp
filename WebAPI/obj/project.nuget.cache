@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Dn5Mmw6WChFb7k4puItLTIJDQBFjIWM1eAMzLvylicNMhLcU0fPfkS1VS2VfncmOK40k+OTmndSAtyItRzog/Q==",
+  "dgSpecHash": "jKEV2pna6xri26wdi9rIVAigUYKpaCzwZ8ucgjYQGy15Si8bHgcMSH5wZPhUacbffVHUsrUr59fRX4a6LQnFHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\okan\\Desktop\\C#\\NTierApp\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\okan\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
+    "C:\\Users\\okan\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
+    "C:\\Users\\okan\\.nuget\\packages\\fluentvalidation\\9.5.2\\fluentvalidation.9.5.2.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

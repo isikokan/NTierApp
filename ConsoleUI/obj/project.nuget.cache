@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zisPA7yMnpD4ilcDoIzxzPTDHUDttS8pC9G21PFUPhWShl1emJ1vnB3RhzkTiy1yzANAjlIxPegyNBQNZHRTLA==",
+  "dgSpecHash": "tjXsZ5MWaP2MihQm/B2wWk8hAuNyu7LoZy3RmvcD5YJymbMeDCcnjI/Y/4V78B5CLc+FbLh/5G9ST2E3ZkOXqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\okan\\Desktop\\C#\\NTierApp\\ConsoleUI\\ConsoleUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\okan\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
+    "C:\\Users\\okan\\.nuget\\packages\\fluentvalidation\\9.5.2\\fluentvalidation.9.5.2.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
