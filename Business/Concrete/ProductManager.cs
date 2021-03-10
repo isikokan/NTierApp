@@ -29,11 +29,18 @@ namespace Business.Concrete
         public IDataResult<Product> GetById(int id)
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == id), Messages.ProductsListed);
+            //return new ErrorDataResult<Product>(Messages.ProductsListed);
         }
 
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
         {
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails(), Messages.ProductsListed);
+        }
+
+        public IResult Add(Product product)
+        {
+            _productDal.Add(product);
+            return new SuccessResult(Messages.ProductAdded);
         }
     }
 }
