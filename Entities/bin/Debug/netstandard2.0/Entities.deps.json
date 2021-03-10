@@ -16,6 +16,14 @@
           "Entities.dll": {}
         }
       },
+      "FluentValidation/9.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.5.2.0"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "dependencies": {
           "System.Threading.Tasks.Extensions": "4.5.4"
@@ -1242,6 +1250,7 @@
       },
       "Core/1.0.0": {
         "dependencies": {
+          "FluentValidation": "9.5.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.11"
         },
         "runtime": {
@@ -1255,6 +1264,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FluentValidation/9.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0TepAypNoZAFmthXnDTDrG55SyKKiv4rar2TtbS5GHbTv/TYwKJBbTxHg8YWCxLgZpe8n9jImIc0tMHKDVgA1A==",
+      "path": "fluentvalidation/9.5.2",
+      "hashPath": "fluentvalidation.9.5.2.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

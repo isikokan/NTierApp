@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HuvpEWWNyZUitRNEsmUwRGwUNqSgw6Yc/baX+rgerTbJDu/jIPaFyniNS4XOAdYZsMqUe0IxPRKlPpY6HHkqkw==",
+  "dgSpecHash": "8HaDJPSHZNcuKqegEK92YLqfFMxEmELsDy1Bl+qK1z3bJwlKy3RBcb8U/N1SmCaadJPTSlZinL3yobMnE4ergg==",
   "success": true,
   "projectFilePath": "C:\\Users\\okan\\Desktop\\C#\\NTierApp\\Entities\\Entities.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\okan\\.nuget\\packages\\fluentvalidation\\9.5.2\\fluentvalidation.9.5.2.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\okan\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
