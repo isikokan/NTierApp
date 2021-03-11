@@ -20,7 +20,7 @@ namespace ConsoleUI
 
         static void ProductTest()
         {
-            IProductService productService = new ProductManager(new EfProductDal());
+            IProductService productService = new ProductManager(new EfProductDal(), new CategoryManager(new EfCategoryDal()));
 
             foreach (var product in productService.GetAll().Data)
             {
@@ -30,7 +30,7 @@ namespace ConsoleUI
 
         static void ProductDetailTest()
         {
-            IProductService productService = new ProductManager(new EfProductDal());
+            IProductService productService = new ProductManager(new EfProductDal(), new CategoryManager(new EfCategoryDal()));
 
             foreach (var productDetail in productService.GetProductDetails().Data)
             {
