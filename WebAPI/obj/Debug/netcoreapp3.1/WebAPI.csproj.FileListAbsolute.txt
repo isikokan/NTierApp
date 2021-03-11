@@ -69,3 +69,5 @@ C:\Users\okan\Desktop\C#\NTierApp\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genrunti
 C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
 C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
 C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
