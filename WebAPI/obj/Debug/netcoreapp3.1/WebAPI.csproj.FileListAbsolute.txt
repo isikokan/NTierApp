@@ -71,3 +71,4 @@ C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensi
 C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\okan\Desktop\C#\NTierApp\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
