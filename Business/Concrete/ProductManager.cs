@@ -3,6 +3,7 @@ using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Core.Utilities.Business;
@@ -30,19 +31,21 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
+        [SecuredOperation("product.get", "admin")]
         [CacheAspect]
         public IDataResult<List<Product>> GetAll()
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
         }
 
+        [SecuredOperation("product.get", "admin")]
         [CacheAspect(duration: 10)]
         public IDataResult<Product> GetById(int id)
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == id), Messages.ProductsListed);
         }
 
-        [SecuredOperation("product.add", "admin")]
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
@@ -60,9 +63,48 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductAdded);
         }
 
+        [SecuredOperation("product.get", "admin")]
         public IDataResult<List<ProductDetailDto>> GetProductDetails()
         {
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails(), Messages.ProductsListed);
+        }
+
+        [SecuredOperation("product.update", "admin")]
+        [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
+        public IResult Update(Product product)
+        {
+            IResult result = BusinessRules.Run(CheckIfProductCountOfCategoryIsCorrect(product.CategoryId),
+                CheckIfProductNameExists(product.ProductName),
+                CheckIfCategoryLimitExceded(product.CategoryId));
+
+            if (result != null)
+            {
+                return result;
+            }
+
+            _productDal.Update(product);
+            return new SuccessResult(Messages.ProductUpdated);
+        }
+
+        [SecuredOperation("admin")]
+        [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
+        [TransactionScopeAspect]
+        public IResult TransactionalOperation(Product product)
+        {
+            IResult result = BusinessRules.Run(CheckIfProductCountOfCategoryIsCorrect(product.CategoryId),
+                CheckIfProductNameExists(product.ProductName),
+                CheckIfCategoryLimitExceded(product.CategoryId));
+
+            if (result != null)
+            {
+                return result;
+            }
+
+            _productDal.Update(product);
+            _productDal.Add(product);
+            return new SuccessResult(Messages.ProductUpdated);
         }
 
         private IResult CheckIfProductCountOfCategoryIsCorrect(int categoryId)
