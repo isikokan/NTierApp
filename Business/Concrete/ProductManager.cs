@@ -3,6 +3,7 @@ using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
 using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation.FluentValidation;
@@ -33,6 +34,7 @@ namespace Business.Concrete
 
         [SecuredOperation("product.get", "admin")]
         [CacheAspect]
+        [PerformanceAspect(2)]
         public IDataResult<List<Product>> GetAll()
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
@@ -40,12 +42,13 @@ namespace Business.Concrete
 
         [SecuredOperation("product.get", "admin")]
         [CacheAspect(duration: 10)]
+        [PerformanceAspect(2)]
         public IDataResult<Product> GetById(int id)
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == id), Messages.ProductsListed);
         }
 
-        [SecuredOperation("admin")]
+        [SecuredOperation("product.add", "admin")]
         [ValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
